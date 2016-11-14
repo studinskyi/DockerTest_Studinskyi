@@ -17,9 +17,28 @@ public class JiraUI {
     String issueKey = "";
 
 
-    @TestCaseId("TMS-1")
-    @Features("Issue")
-    @Stories({"CRUDIssue"})
+    @Test
+    public void logine() {
+        LoginPage loginPage = new LoginPage();
+        loginPage.open();
+        loginPage.enterUsername();
+        loginPage.enterPassword();
+        loginPage.clickLogin();
+
+        //        NewIssuePage newIssuePage = new NewIssuePage();
+        //        newIssuePage.createBug();
+        //        newIssuePage.createSummary();
+        //        newIssuePage.createAssignee();
+        //        newIssuePage.getIssueKey();
+        //        newIssuePage.deleteIssue();
+        //
+        //        LogoutPage logout = new LogoutPage();
+        //        logout.Logout();
+    }
+
+//    @TestCaseId("TMS-1")
+//    @Features("Issue")
+//    @Stories({"CRUDIssue"})
     @Test
     public void createIssue() {
         LoginPage loginPage = new LoginPage();
@@ -39,9 +58,9 @@ public class JiraUI {
         logout.Logout();
     }
 
-    @TestCaseId("TMS-2")
-    @Features("Issue")
-    @Stories({"CRUDIssue"})
+//    @TestCaseId("TMS-2")
+//    @Features("Issue")
+//    @Stories({"CRUDIssue"})
     @Test
     public void updateIssueAddComment() {
         LoginPage loginPage = new LoginPage();

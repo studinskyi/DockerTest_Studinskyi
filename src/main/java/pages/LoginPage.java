@@ -20,12 +20,12 @@ public class LoginPage {
 
     @Step("Enter user name")
     public void enterUsername() {
-        driver.findElement(By.id("login-form-username")).sendKeys("katherinebilous");
+        driver.findElement(By.id("login-form-username")).sendKeys("studinskyi");
     }
 
     @Step("Enter user password")
     public void enterPassword() {
-        driver.findElement(By.id("login-form-password2")).sendKeys("Polis484)");
+        driver.findElement(By.id("login-form-password2")).sendKeys("dima_st)");
     }
 
     @Step("Click login")

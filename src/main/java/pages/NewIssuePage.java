@@ -52,7 +52,7 @@ public class NewIssuePage {
     public void createAssignee() {
         WebElement assignee = driver.findElement(By.xpath("//*[@id='assignee-field']"));
         assignee.clear();
-        assignee.sendKeys("katherinebilous", Keys.ENTER);
+        assignee.sendKeys("studinskyi", Keys.ENTER);
 
     }
 

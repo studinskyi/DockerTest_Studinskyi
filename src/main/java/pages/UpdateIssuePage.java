@@ -28,7 +28,7 @@ public class UpdateIssuePage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        driver.findElement(By.xpath("//*[@id='issue_summary_reporter_katherinebilous']")).click();
+        driver.findElement(By.xpath("//*[@id='issue_summary_reporter_studinskyi']")).click();
         try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
@@ -37,7 +37,8 @@ public class UpdateIssuePage {
 
         driver.findElement(By.xpath("//*[@id='reporter-field']")).sendKeys(Keys.DELETE);
 
-        driver.findElement(By.xpath("//*[@id='reporter-field']")).sendKeys("a.a.piluck2 ", Keys.ENTER);
+        driver.findElement(By.xpath("//*[@id='reporter-field']")).sendKeys("a.a.piluck", Keys.ENTER);
+        //driver.findElement(By.xpath("//*[@id='reporter-field']")).sendKeys("a.a.piluck2 ", Keys.ENTER);
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
