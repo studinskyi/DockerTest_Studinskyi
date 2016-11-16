@@ -1,6 +1,7 @@
 package JiraUITests;
 
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.LoginPage;
@@ -14,16 +15,26 @@ import utils.TestListener;
 
 @Listeners(TestListener.class)
 public class JiraUI {
+
     String issueKey = "";
+    //private WebDriver driver;
 
 
-    @Test
-    public void logine() {
+    @TestCaseId("TMS-1")
+    @Features("Issue")
+    @Stories({"CRUDIssue"})
+    @Test(testName = "Issue")
+    public void login() {
         LoginPage loginPage = new LoginPage();
+        //driver = loginPage.getDriver();
         loginPage.open();
         loginPage.enterUsername();
         loginPage.enterPassword();
         loginPage.clickLogin();
+
+        //        // closing and quit RemoteWebDriver
+        //        driver.close();
+        //        driver.quit();
 
         //        NewIssuePage newIssuePage = new NewIssuePage();
         //        newIssuePage.createBug();
@@ -36,9 +47,9 @@ public class JiraUI {
         //        logout.Logout();
     }
 
-//    @TestCaseId("TMS-1")
-//    @Features("Issue")
-//    @Stories({"CRUDIssue"})
+    @TestCaseId("TMS-1")
+    @Features("Issue")
+    @Stories({"CRUDIssue"})
     @Test
     public void createIssue() {
         LoginPage loginPage = new LoginPage();
@@ -58,9 +69,9 @@ public class JiraUI {
         logout.Logout();
     }
 
-//    @TestCaseId("TMS-2")
-//    @Features("Issue")
-//    @Stories({"CRUDIssue"})
+    @TestCaseId("TMS-2")
+    @Features("Issue")
+    @Stories({"CRUDIssue"})
     @Test
     public void updateIssueAddComment() {
         LoginPage loginPage = new LoginPage();

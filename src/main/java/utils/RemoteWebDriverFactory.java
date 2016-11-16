@@ -22,7 +22,7 @@ public class RemoteWebDriverFactory {
 
         if (browserName.toLowerCase().contains("firefox")) {
             capability = DesiredCapabilities.firefox();
-            capability.setBrowserName("firefox" );
+            capability.setBrowserName("firefox");
             capability.setPlatform(Platform.LINUX);
         }
         if (browserName.toLowerCase().contains("internet")) {
@@ -30,12 +30,13 @@ public class RemoteWebDriverFactory {
         }
         if (browserName.toLowerCase().contains("chrome")) {
             capability = DesiredCapabilities.chrome();
-            capability.setBrowserName("chrome" );
+            capability.setBrowserName("chrome");
             capability.setPlatform(Platform.LINUX);
         }
 
         WebDriver driver = new RemoteWebDriver(hostURL, capability);
-      //  driver.manage().window().maximize();
+        //  driver.manage().window().maximize();
+
         return driver;
     }
 }
